@@ -1,7 +1,7 @@
 #include <windows.h>
 #include "header.h"
 
-void Draw(HDC hdc, menu_t* menu, int key)
+void Draw(HDC hdc, menu_t* menu, key_condition key)
 {
 	HBRUSH Brush;
 	Check(menu, key);
