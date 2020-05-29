@@ -2,6 +2,11 @@
 #include <Windows.h>
 #include <stdio.h>
 
+typedef enum
+{
+	down, up, right, left, def
+}key_condition;
+
 typedef struct
 {
 	char* name;
@@ -26,5 +31,5 @@ char* Word(FILE* file);
 int Number(FILE* file);
 menu_t* Extract();
 
-void Check(menu_t* menu, int key);
-void Draw(HDC hdc, menu_t* menu, int key);
+void Check(menu_t* menu, key_condition key);
+void Draw(HDC hdc, menu_t* menu, key_condition key);
