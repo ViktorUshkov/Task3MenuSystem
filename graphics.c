@@ -23,11 +23,11 @@ void Draw(HDC hdc, menu_t* menu, int key)
 	}
 }
 
-void Check(menu_t* menu, int key)
+void Check(menu_t* menu, key_condition key)
 {
 	switch (key)
 	{
-	case 1:
+	case down:
 	{
 		if (menu->current_but < menu->windows[menu->current_win].but_count - 1)
 		{
@@ -42,7 +42,7 @@ void Check(menu_t* menu, int key)
 		}
 		break;
 	}
-	case 2:
+	case up:
 	{
 		if (menu->current_but > 0)
 		{
@@ -57,7 +57,7 @@ void Check(menu_t* menu, int key)
 		}
 		break;
 	}
-	case 3:
+	case right:
 	{
 		if ((menu->windows[menu->current_win].buttons[menu->current_but].win_link != 0) && (menu->current_win < menu->win_count - 1))
 		{
@@ -66,7 +66,7 @@ void Check(menu_t* menu, int key)
 		}
 		break;
 	}
-	case 4:
+	case left:
 	{
 		if (menu->current_win > 0)
 		{
@@ -79,5 +79,7 @@ void Check(menu_t* menu, int key)
 		}
 		break;
 	}
+	case def:
+		break;
 	}
 }
