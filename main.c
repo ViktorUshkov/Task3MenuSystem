@@ -4,7 +4,7 @@
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 char szProgName[] = "menu_system";
 
-int key_condition = 0;
+key_condition key = def;
 menu_t* menu;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int nCmdShow)
@@ -58,28 +58,28 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT messg, WPARAM wParam, LPARAM lParam)
 		{
 		case VK_DOWN:
 		{
-			key_condition = 1;
+			key = down;
 			InvalidateRect(hWnd, &rect, TRUE);
 			UpdateWindow(hWnd);
 			break;
 		}
 		case VK_UP:
 		{
-			key_condition = 2;
+			key = up;
 			InvalidateRect(hWnd, &rect, TRUE);
 			UpdateWindow(hWnd);
 			break;
 		}
 		case VK_RIGHT:
 		{
-			key_condition = 3;
+			key = right;
 			InvalidateRect(hWnd, &rect, TRUE);
 			UpdateWindow(hWnd);
 			break;
 		}
 		case VK_LEFT:
 		{
-			key_condition = 4;
+			key = left;
 			InvalidateRect(hWnd, &rect, TRUE);
 			UpdateWindow(hWnd);
 			break;
@@ -95,7 +95,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT messg, WPARAM wParam, LPARAM lParam)
 	case WM_PAINT:
 	{
 		hdc = BeginPaint(hWnd, &ps);
-		Draw(hdc, menu, key_condition);
+		Draw(hdc, menu, key);
 		EndPaint(hWnd, &ps);
 		break;
 	}
