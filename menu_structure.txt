@@ -1,4 +1,78 @@
-just see how it works
-...
-...
-...
+MenuBegin
+   WindowBegin
+      Level (0)
+   WindowEnd
+   ButtonBegin
+      Position (0, 0, 300, 100)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (Start)
+      Link (0)
+   ButtonEnd
+   ButtonBegin
+      Position (0, 100, 300, 200)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (Next)
+      Link (1)
+   ButtonEnd
+   ButtonBegin
+      Position (0, 200, 300, 300)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (Deadend)
+      Link (0)
+   ButtonEnd
+
+
+   WindowBegin
+      Level (1)
+   WindowEnd
+   ButtonBegin
+      Position (300, 100, 600, 200)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (NewLevel)
+      Link (0)
+   ButtonEnd
+   ButtonBegin
+      Position (300, 200, 600, 300)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (GoNext)
+      Link (2)
+   ButtonEnd
+   ButtonBegin
+      Position (300, 300, 600, 400)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (OrStayHere)
+      Link (0)
+   ButtonEnd
+
+
+   WindowBegin
+      Level (2)
+   WindowEnd
+   ButtonBegin
+      Position (600, 200, 900, 300)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (LastLevel)
+      Link (0)
+   ButtonEnd
+   ButtonBegin
+      Position (600, 300, 900, 400)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (NoWay)
+      Link (0)
+   ButtonEnd
+   ButtonBegin
+      Position (600, 400, 900, 500)
+      Color (66, 145, 255)
+      HighlightedColor (0, 255, 0)
+      Name (ToGoNext)
+      Link (0)
+   ButtonEnd
+MenuEnd
